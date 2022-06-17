@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- 진짜 지울건지 확인을 받아야 한다-->
+
+<div class="alert alert-primary" role="alert">
+    정말로 {{object.site_name}}을 삭제하실 건가요?
+</div>
+<form action="" method ="post">
+    {% csrf_token%}
+    <input type="submit" value="Delete OK">
+</form>
+{% endblock %}
